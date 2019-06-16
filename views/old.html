@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="public/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="public/css.css">
+</head>
+<body>
+	<div class="black_side">
+		<div class="mainText">
+			<div class="exampleText"></div>
+		</div>
+			<div class="applied">
+				<ul>
+					<% jpg.forEach(function(item){%>
+						<li><div class="njpg"><%= item %></div></li>
+					<% }); %>
+				</ul>
+				<ul>
+					<% word.forEach(function(item){%>
+						<li><div class="nword"><%= item %></div></li>
+					<% }); %>
+				</ul>
+				<ul>
+					<% exel.forEach(function(item){%>
+						<li><div class="nexel"><%= item %></div></li>
+					<% }); %>
+				</ul>
+				<ul>
+					<% zip.forEach(function(item){%>
+						<li><div class="nzip"><%= item %></div></li>
+					<% }); %>
+				</ul>
+				<ul>
+					<% rar.forEach(function(item){%>
+						<li><div class="nrar"><%= item %></div></li>
+					<% }); %>
+				</ul>
+			</div>
+		<div class="jpg">Изображение</div>
+		<div class="word">Документ</div>
+		<div class="exel">Таблица</div>
+		<div class="zip">Сжатая папка</div>
+		<div class="rar">Архив</div>
+		<div class="exit">Закрыть</div>
+	</div>
+	<div class="first_logo">Д</div><div class="logo">убрава-1</div>
+	</div>
+	<center>
+		<div class="info">
+			<div class="left">
+					<!--<ul class="id">
+						<% id.forEach(function(a){%>
+						<li class="uid"><div class="number"><%= a %></div></li>
+						<% }); %>
+					</ul>-->
+					<ul class="text">
+						<% text.forEach(function(item){%>
+						<li class="utext"><div class="number"><%= item %></div></li>
+						<% }); %>
+					</ul>
+			</div>
+
+			<div class="right"></div>
+		</div>
+	</center>
+	<div class="footer"></div>
+	<script>
+
+	//очищяем блоки	
+		if(($(".utext:eq(0)").text() == 'null')){
+			$(".utext:eq(0)").text('');
+		}
+		if(($(".utext:eq(1)").text() == 'null')){
+			$(".utext:eq(1)").text('');
+		}
+		if(($(".utext:eq(2)").text() == 'null')){
+			$(".utext:eq(2)").text('');
+		}
+		if(($(".utext:eq(3)").text() == 'null')){
+			$(".utext:eq(3)").text('');
+		}
+		if(($(".utext:eq(4)").text() == 'null')){
+			$(".utext:eq(4)").text('');
+		}
+		if(($(".utext:eq(5)").text() == 'null')){
+			$(".utext:eq(5)").text('');
+		}
+		if(($(".utext:eq(6)").text() == 'null')){
+			$(".utext:eq(6)").text('');
+		}
+		//очистили
+//alert($(".utext:eq(0)").text());
+//   rgb(212, 212, 147)
+/*function s2(){
+	
+	//if ($(".njpg:eq(2)").text() != 'null.jpg'){
+						//e.preventDefault();
+						window.location.href = url;
+	//					}	
+}*/
+$(".jpg").on('click', function(){
+	if($(".exampleText").text() == $(".utext:eq(0)").text()){
+		if ($(".njpg:eq(0)").text() != 'null.jpg'){
+			var url = "public/jpg/" + $(".njpg:eq(0)").text();
+			window.location.href = url;
+		}
+	}	
+	if($(".exampleText").text() == $(".utext:eq(1)").text()){
+		if ($(".njpg:eq(1)").text() != 'null.jpg'){
+			var url = "public/jpg/" + $(".njpg:eq(1)").text();
+			window.location.href = url;
+		}
+	}	
+	if($(".exampleText").text() == $(".utext:eq(2)").text()){
+		if ($(".njpg:eq(2)").text() != 'null.jpg'){
+			var url = "public/jpg/" + $(".njpg:eq(2)").text();
+			window.location.href = url;
+		}
+	}
+	if($(".exampleText").text() == $(".utext:eq(3)").text()){
+		if ($(".njpg:eq(3)").text() != 'null.jpg'){
+			var url = "public/jpg/" + $(".njpg:eq(3)").text();
+			window.location.href = url;
+		}
+	}
+	if($(".exampleText").text() == $(".utext:eq(4)").text()){
+		if ($(".njpg:eq(4)").text() != 'null.jpg'){
+			var url = "public/jpg/" + $(".njpg:eq(4)").text();
+			window.location.href = url;
+		}
+	}
+	if($(".exampleText").text() == $(".utext:eq(5)").text()){
+		if ($(".njpg:eq(5)").text() != 'null.jpg'){
+			var url = "public/jpg/" + $(".njpg:eq(5)").text();
+			window.location.href = url;
+		}
+	}
+	if($(".exampleText").text() == $(".utext:eq(6)").text()){
+		if ($(".njpg:eq(6)").text() != 'null.jpg'){
+			var url = "public/jpg/" + $(".njpg:eq(6)").text();
+			window.location.href = url;
+		}
+	}
+		});
+		$(".word").on('click', function(){
+	if($(".exampleText").text() == $(".utext:eq(0)").text()){
+		if ($(".nword:eq(0)").text() != 'null.docx'){
+			var url = "public/word/" + $(".nword:eq(0)").text();
+			window.location.href = url;
+		}
+	}	
+	if($(".exampleText").text() == $(".utext:eq(1)").text()){
+		if ($(".nword:eq(1)").text() != 'null.docx'){
+			var url = "public/word/" + $(".nword:eq(1)").text();
+			window.location.href = url;
+		}
+	}	
+	if($(".exampleText").text() == $(".utext:eq(2)").text()){
+		if ($(".nword:eq(2)").text() != 'null.docx'){
+			var url = "public/word/" + $(".nword:eq(2)").text();
+			window.location.href = url;
+		}
+	}
+	if($(".exampleText").text() == $(".utext:eq(3)").text()){
+		if ($(".nword:eq(3)").text() != 'null.docx'){
+			var url = "public/word/" + $(".nword:eq(3)").text();
+			window.location.href = url;
+		}
+	}
+	if($(".exampleText").text() == $(".utext:eq(4)").text()){
+		if ($(".nword:eq(4)").text() != 'null.docx'){
+			var url = "public/word/" + $(".nword:eq(4)").text();
+			window.location.href = url;
+		}
+	}
+	if($(".exampleText").text() == $(".utext:eq(5)").text()){
+		if ($(".nword:eq(5)").text() != 'null.docx'){
+			var url = "public/word/" + $(".nword:eq(5)").text();
+			window.location.href = url;
+		}
+	}
+	if($(".exampleText").text() == $(".utext:eq(6)").text()){
+		if ($(".nword:eq(6)").text() != 'null.docx'){
+			var url = "public/word/" + $(".nword:eq(6)").text();
+			window.location.href = url;
+		}
+	}
+		});
+		$(".exel").on('click', function(){
+	if($(".exampleText").text() == $(".utext:eq(0)").text()){
+		if ($(".nexel:eq(0)").text() != 'null.xlsx'){
+			var url = "public/exel/" + $(".nexel:eq(0)").text();
+			window.location.href = url;
+		}
+	}	
+	if($(".exampleText").text() == $(".utext:eq(1)").text()){
+		if ($(".nexel:eq(1)").text() != 'null.xlsx'){
+			var url = "public/exel/" + $(".nexel:eq(1)").text();
+			window.location.href = url;
+		}
+	}	
+	if($(".exampleText").text() == $(".utext:eq(2)").text()){
+		if ($(".nexel:eq(2)").text() != 'null.xlsx'){
+			var url = "public/exel/" + $(".nexel:eq(2)").text();
+			window.location.href = url;
+		}
+	}
+	if($(".exampleText").text() == $(".utext:eq(3)").text()){
+		if ($(".nexel:eq(3)").text() != 'null.xlsx'){
+			var url = "public/exel/" + $(".nexel:eq(3)").text();
+			window.location.href = url;
+		}
+	}
+	if($(".exampleText").text() == $(".utext:eq(4)").text()){
+		if ($(".nexel:eq(4)").text() != 'null.xlsx'){
+			var url = "public/exel/" + $(".nexel:eq(4)").text();
+			window.location.href = url;
+		}
+	}
+	if($(".exampleText").text() == $(".utext:eq(5)").text()){
+		if ($(".nexel:eq(5)").text() != 'null.xlsx'){
+			var url = "public/exel/" + $(".nexel:eq(5)").text();
+			window.location.href = url;
+		}
+	}
+	if($(".exampleText").text() == $(".utext:eq(6)").text()){
+		if ($(".nexel:eq(6)").text() != 'null.xlsx'){
+			var url = "public/exel/" + $(".nexel:eq(6)").text();
+			window.location.href = url;
+		}
+	}
+	});
+$(".zip").on('click', function(){
+	if($(".exampleText").text() == $(".utext:eq(0)").text()){
+		if ($(".nzip:eq(0)").text() != 'null.zip'){
+			var url = "public/zip/" + $(".nzip:eq(0)").text();
+			window.location.href = url;
+		}
+	}	
+	if($(".exampleText").text() == $(".utext:eq(1)").text()){
+		if ($(".nzip:eq(1)").text() != 'null.zip'){
+			var url = "public/zip/" + $(".nzip:eq(1)").text();
+			window.location.href = url;
+		}
+	}	
+	if($(".exampleText").text() == $(".utext:eq(2)").text()){
+		if ($(".nzip:eq(2)").text() != 'null.zip'){
+			var url = "public/zip/" + $(".nzip:eq(2)").text();
+			window.location.href = url;
+		}
+	}
+	if($(".exampleText").text() == $(".utext:eq(3)").text()){
+		if ($(".nzip:eq(3)").text() != 'null.zip'){
+			var url = "public/zip/" + $(".nzip:eq(3)").text();
+			window.location.href = url;
+		}
+	}
+	if($(".exampleText").text() == $(".utext:eq(4)").text()){
+		if ($(".nzip:eq(4)").text() != 'null.zip'){
+			var url = "public/zip/" + $(".nzip:eq(4)").text();
+			window.location.href = url;
+		}
+	}
+	if($(".exampleText").text() == $(".utext:eq(5)").text()){
+		if ($(".nzip:eq(5)").text() != 'null.zip'){
+			var url = "public/zip/" + $(".nzip:eq(5)").text();
+			window.location.href = url;
+		}
+	}
+	if($(".exampleText").text() == $(".utext:eq(6)").text()){
+		if ($(".nzip:eq(6)").text() != 'null.zip'){
+			var url = "public/zip/" + $(".nzip:eq(6)").text();
+			window.location.href = url;
+		}
+	}
+});
+$(".rar").on('click', function(){
+	if($(".exampleText").text() == $(".utext:eq(0)").text()){
+		if ($(".nrar:eq(0)").text() != 'null.rar'){
+			var url = "public/rar/" + $(".nrar:eq(0)").text();
+			window.location.href = url;
+		}
+	}	
+	if($(".exampleText").text() == $(".utext:eq(1)").text()){
+		if ($(".nrar:eq(1)").text() != 'null.rar'){
+			var url = "public/rar/" + $(".nrar:eq(1)").text();
+			window.location.href = url;
+		}
+	}	
+	if($(".exampleText").text() == $(".utext:eq(2)").text()){
+		if ($(".nrar:eq(2)").text() != 'null.rar'){
+			var url = "public/rar/" + $(".nrar:eq(2)").text();
+			window.location.href = url;
+		}
+	}
+	if($(".exampleText").text() == $(".utext:eq(3)").text()){
+		if ($(".nrar:eq(3)").text() != 'null.rar'){
+			var url = "public/rar/" + $(".nrar:eq(3)").text();
+			window.location.href = url;
+		}
+	}
+	if($(".exampleText").text() == $(".utext:eq(4)").text()){
+		if ($(".nrar:eq(4)").text() != 'null.rar'){
+			var url = "public/rar/" + $(".nrar:eq(4)").text();
+			window.location.href = url;
+		}
+	}
+	if($(".exampleText").text() == $(".utext:eq(5)").text()){
+		if ($(".nrar:eq(5)").text() != 'null.rar'){
+			var url = "public/rar/" + $(".nrar:eq(5)").text();
+			window.location.href = url;
+		}
+	}
+	if($(".exampleText").text() == $(".utext:eq(6)").text()){
+		if ($(".nrar:eq(6)").text() != 'null.rar'){
+			var url = "public/rar/" + $(".nrar:eq(6)").text();
+			window.location.href = url;
+		}
+	}
+});
+		$(".number:eq(0)").on('click', function(){
+			$(".black_side").animate({
+			width: "80%",
+			height: "400px",
+			display: "block",
+			marginLeft: "10%",
+			borderBottomLeftRadius: "30px",
+			borderBottomRightRadius: "30px"
+			}, 500, function(){
+				$(".mainText").css("display", "inline-block");
+				$(".exit").css("display", "inline-block");
+				$(".exampleText").text($(".number:eq(0)").text());
+				$(".jpg").css("display", "inline-block");
+				$(".word").css("display", "inline-block");
+				$(".exel").css("display", "inline-block");
+				$(".rar").css("display", "inline-block");
+				$(".zip").css("display", "inline-block");
+				if ($(".njpg:eq(0)").text() != 'null.jpg'){
+					$(".jpg").css("background-color", "#e63e3e");
+					$(".jpg").css("cursor", "pointer");
+				}
+				if ($(".nword:eq(0)").text() != 'null.docx'){
+					$(".word").css("background-color", "#3d3df5");
+					$(".word").css("cursor", "pointer");
+				}
+				if ($(".nexel:eq(0)").text() != 'null.xlsx'){
+					$(".exel").css("background-color", "#45d445");
+					$(".exel").css("cursor", "pointer");
+				}
+				if ($(".nzip:eq(0)").text() != 'null.zip'){
+					$(".zip").css("background-color", "#ecec3b");
+					$(".zip").css("cursor", "pointer");
+				}
+				if ($(".nrar:eq(0)").text() != 'null.rar'){
+					$(".rar").css("background-color", "#c538c5");
+					$(".rar").css("cursor", "pointer");
+				}
+				if($(".njpg:eq(0)").text() == 'null.jpg'){
+					$(".jpg").css("background-color", "#d4d493");
+					$(".jpg").css("cursor", "default");
+				}
+				if($(".nword:eq(0)").text() == 'null.docx'){
+					$(".word").css("background-color", "#d4d493");
+					$(".word").css("cursor", "default");
+				}
+				if($(".nexel:eq(0)").text() == 'null.xlsx'){
+					$(".exel").css("background-color", "#d4d493");
+					$(".exel").css("cursor", "default");
+				}
+				if($(".nzip:eq(0)").text() == 'null.zip'){
+					$(".zip").css("background-color", "#d4d493");
+					$(".zip").css("cursor", "default");
+				}
+				if($(".nrar:eq(0)").text() == 'null.rar'){
+					$(".rar").css("background-color", "#d4d493");
+					$(".rar").css("cursor", "default");
+				}
+			});
+		});
+		$(".number:eq(1)").on('click', function(){
+			$(".black_side").animate({
+			width: "80%",
+			height: "400px",
+			display: "block",
+			marginLeft: "10%",
+			borderBottomLeftRadius: "30px",
+			borderBottomRightRadius: "30px"
+			}, 500, function(){
+				$(".mainText").css("display", "inline-block");
+				$(".exit").css("display", "inline-block");
+				$(".exampleText").text($(".number:eq(1)").text());
+				$(".jpg").css("display", "inline-block");
+				$(".word").css("display", "inline-block");
+				$(".exel").css("display", "inline-block");
+				$(".rar").css("display", "inline-block");
+				$(".zip").css("display", "inline-block");
+				if ($(".njpg:eq(1)").text() != 'null.jpg'){
+					$(".jpg").css("background-color", "#e63e3e");
+					$(".jpg").css("cursor", "pointer");
+				}
+				if ($(".nword:eq(1)").text() != 'null.docx'){
+					$(".word").css("background-color", "#3d3df5");
+					$(".word").css("cursor", "pointer");
+				}
+				if ($(".nexel:eq(1)").text() != 'null.xlsx'){
+					$(".exel").css("background-color", "#45d445");
+					$(".exel").css("cursor", "pointer");
+				}
+				if ($(".nzip:eq(1)").text() != 'null.zip'){
+					$(".zip").css("background-color", "#ecec3b");
+					$(".zip").css("cursor", "pointer");
+				}
+				if ($(".nrar:eq(1)").text() != 'null.rar'){
+					$(".rar").css("background-color", "#c538c5");
+					$(".rar").css("cursor", "pointer");
+				}
+				if($(".njpg:eq(1)").text() == 'null.jpg'){
+					$(".jpg").css("background-color", "#d4d493");
+					$(".jpg").css("cursor", "default");
+				}
+				if($(".nword:eq(1)").text() == 'null.docx'){
+					$(".word").css("background-color", "#d4d493");
+					$(".word").css("cursor", "default");
+				}
+				if($(".nexel:eq(1)").text() == 'null.xlsx'){
+					$(".exel").css("background-color", "#d4d493");
+					$(".exel").css("cursor", "default");
+				}
+				if($(".nzip:eq(1)").text() == 'null.zip'){
+					$(".zip").css("background-color", "#d4d493");
+					$(".zip").css("cursor", "default");
+				}
+				if($(".nrar:eq(1)").text() == 'null.rar'){
+					$(".rar").css("background-color", "#d4d493");
+					$(".rar").css("cursor", "default");
+				}
+			});
+		});
+		$(".number:eq(2)").on('click', function(){
+			$(".black_side").animate({
+			width: "80%",
+			height: "400px",
+			display: "block",
+			marginLeft: "10%",
+			borderBottomLeftRadius: "30px",
+			borderBottomRightRadius: "30px"
+			}, 500, function(){
+				$(".mainText").css("display", "inline-block");
+				$(".exit").css("display", "inline-block");
+				$(".exampleText").text($(".number:eq(2)").text());
+				$(".jpg").css("display", "inline-block");
+				$(".word").css("display", "inline-block");
+				$(".exel").css("display", "inline-block");
+				$(".rar").css("display", "inline-block");
+				$(".zip").css("display", "inline-block");
+				if ($(".njpg:eq(2)").text() != 'null.jpg'){
+					$(".jpg").css("background-color", "#e63e3e");
+					$(".jpg").css("cursor", "pointer");
+				}
+				if ($(".nword:eq(2)").text() != 'null.docx'){
+					$(".word").css("background-color", "#3d3df5");
+					$(".word").css("cursor", "pointer");
+				}
+				if ($(".nexel:eq(2)").text() != 'null.xlsx'){
+					$(".exel").css("background-color", "#45d445");
+					$(".exel").css("cursor", "pointer");
+				}
+				if ($(".nzip:eq(2)").text() != 'null.zip'){
+					$(".zip").css("background-color", "#ecec3b");
+					$(".zip").css("cursor", "pointer");
+				}
+				if ($(".nrar:eq(2)").text() != 'null.rar'){
+					$(".rar").css("background-color", "#c538c5");
+					$(".rar").css("cursor", "pointer");
+				}
+				if($(".njpg:eq(2)").text() == 'null.jpg'){
+					$(".jpg").css("background-color", "#d4d493");
+					$(".jpg").css("cursor", "default");
+				}
+				if($(".nword:eq(2)").text() == 'null.docx'){
+					$(".word").css("background-color", "#d4d493");
+					$(".word").css("cursor", "default");
+				}
+				if($(".nexel:eq(2)").text() == 'null.xlsx'){
+					$(".exel").css("background-color", "#d4d493");
+					$(".exel").css("cursor", "default");
+				}
+				if($(".nzip:eq(2)").text() == 'null.zip'){
+					$(".zip").css("background-color", "#d4d493");
+					$(".zip").css("cursor", "default");
+				}
+				if($(".nrar:eq(2)").text() == 'null.rar'){
+					$(".rar").css("background-color", "#d4d493");
+					$(".rar").css("cursor", "default");
+				}
+			});
+		});
+		$(".number:eq(3)").on('click', function(){
+			$(".black_side").animate({
+			width: "80%",
+			height: "400px",
+			display: "block",
+			marginLeft: "10%",
+			borderBottomLeftRadius: "30px",
+			borderBottomRightRadius: "30px"
+			}, 500, function(){
+				$(".mainText").css("display", "inline-block");
+				$(".exit").css("display", "inline-block");
+				$(".exampleText").text($(".number:eq(3)").text());
+				$(".jpg").css("display", "inline-block");
+				$(".word").css("display", "inline-block");
+				$(".exel").css("display", "inline-block");
+				$(".rar").css("display", "inline-block");
+				$(".zip").css("display", "inline-block");
+				if ($(".njpg:eq(3)").text() != 'null.jpg'){
+					$(".jpg").css("background-color", "#e63e3e");
+					$(".jpg").css("cursor", "pointer");
+				}
+				if ($(".nword:eq(3)").text() != 'null.docx'){
+					$(".word").css("background-color", "#3d3df5");
+					$(".word").css("cursor", "pointer");
+				}
+				if ($(".nexel:eq(3)").text() != 'null.xlsx'){
+					$(".exel").css("background-color", "#45d445");
+					$(".exel").css("cursor", "pointer");
+				}
+				if ($(".nzip:eq(3)").text() != 'null.zip'){
+					$(".zip").css("background-color", "#ecec3b");
+					$(".zip").css("cursor", "pointer");
+				}
+				if ($(".nrar:eq(3)").text() != 'null.rar'){
+					$(".rar").css("background-color", "#c538c5");
+					$(".rar").css("cursor", "pointer");
+				}
+				if($(".njpg:eq(3)").text() == 'null.jpg'){
+					$(".jpg").css("background-color", "#d4d493");
+					$(".jpg").css("cursor", "default");
+				}
+				if($(".nword:eq(3)").text() == 'null.docx'){
+					$(".word").css("background-color", "#d4d493");
+					$(".word").css("cursor", "default");
+				}
+				if($(".nexel:eq(3)").text() == 'null.xlsx'){
+					$(".exel").css("background-color", "#d4d493");
+					$(".exel").css("cursor", "default");
+				}
+				if($(".nzip:eq(3)").text() == 'null.zip'){
+					$(".zip").css("background-color", "#d4d493");
+					$(".zip").css("cursor", "default");
+				}
+				if($(".nrar:eq(3)").text() == 'null.rar'){
+					$(".rar").css("background-color", "#d4d493");
+					$(".rar").css("cursor", "default");
+				}
+			});
+		});
+		$(".number:eq(4)").on('click', function(){
+			$(".black_side").animate({
+			width: "80%",
+			height: "400px",
+			display: "block",
+			marginLeft: "10%",
+			borderBottomLeftRadius: "30px",
+			borderBottomRightRadius: "30px"
+			}, 500, function(){
+				$(".mainText").css("display", "inline-block");
+				$(".exit").css("display", "inline-block");
+				$(".exampleText").text($(".number:eq(4)").text());
+				$(".jpg").css("display", "inline-block");
+				$(".word").css("display", "inline-block");
+				$(".exel").css("display", "inline-block");
+				$(".rar").css("display", "inline-block");
+				$(".zip").css("display", "inline-block");
+				if ($(".njpg:eq(4)").text() != 'null.jpg'){
+					$(".jpg").css("background-color", "#e63e3e");
+					$(".jpg").css("cursor", "pointer");
+				}
+				if ($(".nword:eq(4)").text() != 'null.docx'){
+					$(".word").css("background-color", "#3d3df5");
+					$(".word").css("cursor", "pointer");
+				}
+				if ($(".nexel:eq(4)").text() != 'null.xlsx'){
+					$(".exel").css("background-color", "#45d445");
+					$(".exel").css("cursor", "pointer");
+				}
+				if ($(".nzip:eq(4)").text() != 'null.zip'){
+					$(".zip").css("background-color", "#ecec3b");
+					$(".zip").css("cursor", "pointer");
+				}
+				if ($(".nrar:eq(4)").text() != 'null.rar'){
+					$(".rar").css("background-color", "#c538c5");
+					$(".rar").css("cursor", "pointer");
+				}
+				if($(".njpg:eq(4)").text() == 'null.jpg'){
+					$(".jpg").css("background-color", "#d4d493");
+					$(".jpg").css("cursor", "default");
+				}
+				if($(".nword:eq(4)").text() == 'null.docx'){
+					$(".word").css("background-color", "#d4d493");
+					$(".word").css("cursor", "default");
+				}
+				if($(".nexel:eq(4)").text() == 'null.xlsx'){
+					$(".exel").css("background-color", "#d4d493");
+					$(".exel").css("cursor", "default");
+				}
+				if($(".nzip:eq(4)").text() == 'null.zip'){
+					$(".zip").css("background-color", "#d4d493");
+					$(".zip").css("cursor", "default");
+				}
+				if($(".nrar:eq(4)").text() == 'null.rar'){
+					$(".rar").css("background-color", "#d4d493");
+					$(".rar").css("cursor", "default");
+				}
+			});
+		});
+		$(".number:eq(5)").on('click', function(){
+			$(".black_side").animate({
+			width: "80%",
+			height: "400px",
+			display: "block",
+			marginLeft: "10%",
+			borderBottomLeftRadius: "30px",
+			borderBottomRightRadius: "30px"
+			}, 500, function(){
+				$(".mainText").css("display", "inline-block");
+				$(".exit").css("display", "inline-block");
+				$(".exampleText").text($(".number:eq(5)").text());
+				$(".jpg").css("display", "inline-block");
+				$(".word").css("display", "inline-block");
+				$(".exel").css("display", "inline-block");
+				$(".rar").css("display", "inline-block");
+				$(".zip").css("display", "inline-block");
+				if ($(".njpg:eq(5)").text() != 'null.jpg'){
+					$(".jpg").css("background-color", "#e63e3e");
+					$(".jpg").css("cursor", "pointer");
+				}
+				if ($(".nword:eq(5)").text() != 'null.docx'){
+					$(".word").css("background-color", "#3d3df5");
+					$(".word").css("cursor", "pointer");
+				}
+				if ($(".nexel:eq(5)").text() != 'null.xlsx'){
+					$(".exel").css("background-color", "#45d445");
+					$(".exel").css("cursor", "pointer");
+				}
+				if ($(".nzip:eq(5)").text() != 'null.zip'){
+					$(".zip").css("background-color", "#ecec3b");
+					$(".zip").css("cursor", "pointer");
+				}
+				if ($(".nrar:eq(5)").text() != 'null.rar'){
+					$(".rar").css("background-color", "#c538c5");
+					$(".rar").css("cursor", "pointer");
+				}
+				if($(".njpg:eq(5)").text() == 'null.jpg'){
+					$(".jpg").css("background-color", "#d4d493");
+					$(".jpg").css("cursor", "default");
+				}
+				if($(".nword:eq(5)").text() == 'null.docx'){
+					$(".word").css("background-color", "#d4d493");
+					$(".word").css("cursor", "default");
+				}
+				if($(".nexel:eq(5)").text() == 'null.xlsx'){
+					$(".exel").css("background-color", "#d4d493");
+					$(".exel").css("cursor", "default");
+				}
+				if($(".nzip:eq(5)").text() == 'null.zip'){
+					$(".zip").css("background-color", "#d4d493");
+					$(".zip").css("cursor", "default");
+				}
+				if($(".nrar:eq(5)").text() == 'null.rar'){
+					$(".rar").css("background-color", "#d4d493");
+					$(".rar").css("cursor", "default");
+				}
+			});
+		});
+		$(".number:eq(6)").on('click', function(){
+			$(".black_side").animate({
+			width: "80%",
+			height: "400px",
+			display: "block",
+			marginLeft: "10%",
+			borderBottomLeftRadius: "30px",
+			borderBottomRightRadius: "30px"
+			}, 500, function(){
+				$(".mainText").css("display", "inline-block");
+				$(".exit").css("display", "inline-block");
+				$(".exampleText").text($(".number:eq(6)").text());
+				$(".jpg").css("display", "inline-block");
+				$(".word").css("display", "inline-block");
+				$(".exel").css("display", "inline-block");
+				$(".rar").css("display", "inline-block");
+				$(".zip").css("display", "inline-block");
+				if ($(".njpg:eq(6)").text() != 'null.jpg'){
+					$(".jpg").css("background-color", "#e63e3e");
+					$(".jpg").css("cursor", "pointer");
+				}
+				if ($(".nword:eq(6)").text() != 'null.docx'){
+					$(".word").css("background-color", "#3d3df5");
+					$(".word").css("cursor", "pointer");
+				}
+				if ($(".nexel:eq(6)").text() != 'null.xlsx'){
+					$(".exel").css("background-color", "#45d445");
+					$(".exel").css("cursor", "pointer");
+				}
+				if ($(".nzip:eq(6)").text() != 'null.zip'){
+					$(".zip").css("background-color", "#ecec3b");
+					$(".zip").css("cursor", "pointer");
+				}
+				if ($(".nrar:eq(6)").text() != 'null.rar'){
+					$(".rar").css("background-color", "#c538c5");
+					$(".rar").css("cursor", "pointer");
+				}
+				if($(".njpg:eq(6)").text() == 'null.jpg'){
+					$(".jpg").css("background-color", "#d4d493");
+					$(".jpg").css("cursor", "default");
+				}
+				if($(".nword:eq(6)").text() == 'null.docx'){
+					$(".word").css("background-color", "#d4d493");
+					$(".word").css("cursor", "default");
+				}
+				if($(".nexel:eq(6)").text() == 'null.xlsx'){
+					$(".exel").css("background-color", "#d4d493");
+					$(".exel").css("cursor", "default");
+				}
+				if($(".nzip:eq(6)").text() == 'null.zip'){
+					$(".zip").css("background-color", "#d4d493");
+					$(".zip").css("cursor", "default");
+				}
+				if($(".nrar:eq(6)").text() == 'null.rar'){
+					$(".rar").css("background-color", "#d4d493");
+					$(".rar").css("cursor", "default");
+				}
+			});
+		});
+
+
+		//выход
+		$(".exit").on('click', function(){
+			$(".exit").css("display", "none");
+			$(".mainText").css("display", "none");
+			$(".jpg").css("display", "none");
+			$(".word").css("display", "none");
+			$(".exel").css("display", "none");
+			$(".rar").css("display", "none");
+			$(".zip").css("display", "none");
+			$(".black_side").animate({
+			position: "fixed",
+			marginTop: "-10px",
+			marginLeft: "-10%",
+			display: "inline-block",
+			width: "120%",
+			height: "15px",
+			}, 500, function(){
+				$(".mainText").css("display", "none");
+				$(".exit").css("display", "none");
+				$(".exampleText").text('');
+			});
+		});
+	</script>
+</body>
+</html>

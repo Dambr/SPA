@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="/public/jpg/ico.png" type="image/png">
+	<title>Дубрава-1</title>
+	<script type="text/javascript" src="public/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="public/css.css">
+	<!--<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">--> 
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+			<ul class="header_ul">
+				<li class="header1">Садовое некомерческое товарищество</li>
+				<li class="header2">ДУБРАВА-1</li>
+				<li class="header3">Шушково</li>
+			</ul>
+			<div class="menu_container">
+				<center>
+					<ul class="menu">
+						<li class="menu1">главная</li>
+						<li class="menu2">опросы</li>
+						<li class="menu3">правление</li>
+						<li class="menu4">правовая база</li>
+						<li class="menu5">финансы</li>
+						<li class="menu6">электроэнергия</li>
+						<li class="menu7">наша жизнь</li>
+						<li class="menu8">форум</li>
+					</ul>
+				</center>
+			</div>
+		</div>
+		<div class="corpus">
+			<div class="glavnaya">
+				<div class="left">
+					<div class="inner_left">
+						<ul class="text">
+							<% text.forEach(function(item){%>
+							<li class="utext"><div class="caption"></div><div class="number"><%= item %></div></li>
+							<% }); %>
+						</ul>
+					</div>
+				</div></div><div class="oprosi">
+					<p>Опросы</p>
+				</div><div class="pravlenie">
+					<div class="pr_header">Правление</div>
+					<ul class="pr_ul">
+						<li class="pr_li">
+							<div class="pr_photo">Фото1</div>
+							<div class="pr_info">
+								<div class="pr_name">Имя 1(№ участка1)</div>
+								<div class="pr_vac">Должность1</div>
+								<div class="pr_tel">Телефон1</div>
+								<div class="pr_email">Email1</div>
+							</div>
+						</li>
+						<li class="pr_li">
+							<div class="pr_photo">Фото2</div>
+							<div class="pr_info">
+								<div class="pr_name">Имя 2(№ участка2)</div>
+								<div class="pr_vac">Должность2</div>
+								<div class="pr_tel">Телефон2</div>
+								<div class="pr_email">Email2</div>
+							</div>
+						</li>
+						<li class="pr_li">
+							<div class="pr_photo">Фото3</div>
+							<div class="pr_info">
+								<div class="pr_name">Имя 3(№ участка3)</div>
+								<div class="pr_vac">Должность3</div>
+								<div class="pr_tel">Телефон3</div>
+								<div class="pr_email">Email3</div>
+							</div>
+						</li>
+					</ul>
+				</div><div class="pravBaza">
+					//////////////////
+				</div><div class="finansi">
+					////////////////////
+				</div><div class="electro">
+					///////////////////
+				</div><div class="nashaJizn">
+					/////////////////
+				</div><div class="forum">
+					//////////////
+				</div><div class="right">
+					<div class="inner_right">
+						<div class="inner_right_news">Новости СНТ Дубрава-1</div>
+						<ul class="themes">
+							<li class="theme">1</li>
+							<li class="theme">2</li>
+							<li class="theme">3</li>
+							<li class="theme">4</li>
+							<li class="theme">5</li>
+							<li class="theme">6</li>
+							<li class="theme">7</li>
+						</ul>
+						<div class="map">
+							<!--<div class="inner_right_news">Мы на карте</div>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3439.8814030196236!2d39.111785199905746!3d56.62829542659675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b35381da0059d1%3A0x4f548a2acf22a9fa!2z0KjRg9GI0LrQvtCy0L4!5e1!3m2!1sen!2sus!4v1526847249975" frameborder="0" style="width:80%;height:300px; margin-top: 10px; margin-left: 10%;" allowfullscreen></iframe>-->
+						</div>
+						<div class="jpg">ИЗОБРАЖЕНИЕ</div>
+						<div class="docx">ДОКУМЕНТ</div>
+						<div class="xlsx">ТАБЛИЦА</div>
+						<div class="zip">СЖАТАЯ ПАПКА</div>
+						<div class="rar">АРХИВ</div>
+						<div class="applied">
+							<ul>
+								<% jpg.forEach(function(item){%>
+								<li><div class="njpg"><%= item %></div></li>
+								<% }); %>
+							</ul>
+							<ul>
+								<% docx.forEach(function(item){%>
+								<li><div class="ndocx"><%= item %></div></li>
+								<% }); %>
+							</ul>
+							<ul>
+								<% xlsx.forEach(function(item){%>
+								<li><div class="nxlsx"><%= item %></div></li>
+								<% }); %>
+							</ul>
+							<ul>
+								<% zip.forEach(function(item){%>
+								<li><div class="nzip"><%= item %></div></li>
+								<% }); %>
+							</ul>
+							<ul>
+								<% rar.forEach(function(item){%>
+								<li><div class="nrar"><%= item %></div></li>
+								<% }); %>
+							</ul>
+						</div>
+					</div>	
+				
+			</div>
+			
+		</div>
+		<div class="footer">Дубрава-1</div>
+	</div>
+		
+
+<script>
+var N;
+	//небольшая предварительная косметика
+	//$(".utext:eq(0)").css("border", "none");
+	//
+//очищаем все ненужное
+	if ($(".number:eq(6)").text() == 'null'){
+		$(".number:eq(6)").text('');
+		$(".utext:eq(6)").css("border", "none");
+	}
+	if ($(".number:eq(5)").text() == 'null'){
+		$(".number:eq(5)").text('');
+		$(".utext:eq(5)").css("border", "none");
+	}
+	if ($(".number:eq(4)").text() == 'null'){
+		$(".number:eq(4)").text('');
+		$(".utext:eq(4)").css("border", "none");
+	}
+	if ($(".number:eq(3)").text() == 'null'){
+		$(".number:eq(3)").text('');
+		$(".utext:eq(3)").css("border", "none");
+	}	
+	if ($(".number:eq(2)").text() == 'null'){
+		$(".number:eq(2)").text('');
+		$(".utext:eq(2)").css("border", "none");
+	}
+	if ($(".number:eq(1)").text() == 'null'){
+		$(".number:eq(1)").text('');
+		$(".utext:eq(1)").css("border", "none");
+	}
+	if ($(".number:eq(0)").text() == 'null'){
+		$(".number:eq(0)").text('');
+		$(".utext:eq(0)").css("border", "none");
+	}
+	//очистили
+	//заполняем первичные новости
+	$(".caption:eq(0)").text($(".number:eq(0)").text().split('******')[0]);
+	$(".number:eq(0)").text($(".number:eq(0)").text().split('******')[1]);
+	$(".caption:eq(1)").text($(".number:eq(1)").text().split('******')[0]);
+	$(".number:eq(1)").text($(".number:eq(1)").text().split('******')[1]);
+	$(".caption:eq(2)").text($(".number:eq(2)").text().split('******')[0]);
+	$(".number:eq(2)").text($(".number:eq(2)").text().split('******')[1]);
+	$(".caption:eq(3)").text($(".number:eq(3)").text().split('******')[0]);
+	$(".number:eq(3)").text($(".number:eq(3)").text().split('******')[1]);
+	$(".caption:eq(4)").text($(".number:eq(4)").text().split('******')[0]);
+	$(".number:eq(4)").text($(".number:eq(4)").text().split('******')[1]);
+	$(".caption:eq(5)").text($(".number:eq(5)").text().split('******')[0]);
+	$(".number:eq(5)").text($(".number:eq(5)").text().split('******')[1]);
+	$(".caption:eq(6)").text($(".number:eq(6)").text().split('******')[0]);
+	$(".number:eq(6)").text($(".number:eq(6)").text().split('******')[1]);
+	//заполнили первичные новости
+	//заполняем заголовки из правой колонки
+	$(".theme:eq(0)").text($(".caption:eq(0)").text());
+	$(".theme:eq(1)").text($(".caption:eq(1)").text());
+	$(".theme:eq(2)").text($(".caption:eq(2)").text());
+	$(".theme:eq(3)").text($(".caption:eq(3)").text());
+	$(".theme:eq(4)").text($(".caption:eq(4)").text());
+	$(".theme:eq(5)").text($(".caption:eq(5)").text());
+	$(".theme:eq(6)").text($(".caption:eq(6)").text());
+	//заполнили заголовки из правой колонки
+	//обрабатываем открытие новости
+	$(".caption:eq(0)").on("click", function(){
+		$(".utext").css("display", "none");
+		$(".utext:eq(0)").css("display", "inline-block");
+		$(".utext:eq(0)").css("height", "auto");
+		$(".corpus").css("height", "auto");
+		N=1;
+		$(".jpg").css("display", "inline-block");
+		$(".docx").css("display", "inline-block");
+		$(".xlsx").css("display", "inline-block");
+		$(".zip").css("display", "inline-block");
+		$(".rar").css("display", "inline-block");
+		if($(".njpg:eq(0)").text() != 'null.jpg') $(".jpg").css("background-color", "red");
+		else $(".jpg").css("background-color", "#d4d493");
+		if($(".ndocx:eq(0)").text() != 'null.docx') $(".docx").css("background-color", "blue");
+		else $(".docx").css("background-color", "#d4d493");
+		if($(".nxlsx:eq(0)").text() != 'null.xlsx') $(".xlsx").css("background-color", "green");
+		else $(".xlsx").css("background-color", "#d4d493");
+		if($(".nzip:eq(0)").text() != 'null.zip') $(".zip").css("background-color", "yellow");
+		else $(".zip").css("background-color", "#d4d493");
+		if($(".nrar:eq(0)").text() != 'null.rar') $(".rar").css("background-color", "pink");
+		else $(".rar").css("background-color", "#d4d493");
+	});
+	$(".caption:eq(1)").on("click", function(){
+		$(".utext").css("display", "none");
+		$(".utext:eq(1)").css("display", "inline-block");
+		$(".utext:eq(1)").css("height", "auto");
+		$(".corpus").css("height", "auto");
+		N=2;
+		$(".jpg").css("display", "inline-block");
+		$(".docx").css("display", "inline-block");
+		$(".xlsx").css("display", "inline-block");
+		$(".zip").css("display", "inline-block");
+		$(".rar").css("display", "inline-block");
+		if($(".njpg:eq(1)").text() != 'null.jpg') $(".jpg").css("background-color", "red");
+		else $(".jpg").css("background-color", "#d4d493");
+		if($(".ndocx:eq(1)").text() != 'null.docx') $(".docx").css("background-color", "blue");
+		else $(".docx").css("background-color", "#d4d493");
+		if($(".nxlsx:eq(1)").text() != 'null.xlsx') $(".xlsx").css("background-color", "green");
+		else $(".xlsx").css("background-color", "#d4d493");
+		if($(".nzip:eq(1)").text() != 'null.zip') $(".zip").css("background-color", "yellow");
+		else $(".zip").css("background-color", "#d4d493");
+		if($(".nrar:eq(1)").text() != 'null.rar') $(".rar").css("background-color", "pink");
+		else $(".rar").css("background-color", "#d4d493");
+	});
+	$(".caption:eq(2)").on("click", function(){
+		$(".utext").css("display", "none");
+		$(".utext:eq(2)").css("display", "inline-block");
+		$(".utext:eq(2)").css("height", "auto");
+		$(".corpus").css("height", "auto");
+		N=3;
+		$(".jpg").css("display", "inline-block");
+		$(".docx").css("display", "inline-block");
+		$(".xlsx").css("display", "inline-block");
+		$(".zip").css("display", "inline-block");
+		$(".rar").css("display", "inline-block");
+		if($(".njpg:eq(2)").text() != 'null.jpg') $(".jpg").css("background-color", "red");
+		else $(".jpg").css("background-color", "#d4d493");
+		if($(".ndocx:eq(2)").text() != 'null.docx') $(".docx").css("background-color", "blue");
+		else $(".docx").css("background-color", "#d4d493");
+		if($(".nxlsx:eq(2)").text() != 'null.xlsx') $(".xlsx").css("background-color", "green");
+		else $(".xlsx").css("background-color", "#d4d493");
+		if($(".nzip:eq(2)").text() != 'null.zip') $(".zip").css("background-color", "yellow");
+		else $(".zip").css("background-color", "#d4d493");
+		if($(".nrar:eq(2)").text() != 'null.rar') $(".rar").css("background-color", "pink");
+		else $(".rar").css("background-color", "#d4d493");
+	});
+	$(".caption:eq(3)").on("click", function(){
+		$(".utext").css("display", "none");
+		$(".utext:eq(3)").css("display", "inline-block");
+		$(".utext:eq(3)").css("height", "auto");
+		$(".corpus").css("height", "auto");
+		N=4;
+		$(".jpg").css("display", "inline-block");
+		$(".docx").css("display", "inline-block");
+		$(".xlsx").css("display", "inline-block");
+		$(".zip").css("display", "inline-block");
+		$(".rar").css("display", "inline-block");
+		if($(".njpg:eq(3)").text() != 'null.jpg') $(".jpg").css("background-color", "red");
+		else $(".jpg").css("background-color", "#d4d493");
+		if($(".ndocx:eq(3)").text() != 'null.docx') $(".docx").css("background-color", "blue");
+		else $(".docx").css("background-color", "#d4d493");
+		if($(".nxlsx:eq(3)").text() != 'null.xlsx') $(".xlsx").css("background-color", "green");
+		else $(".xlsx").css("background-color", "#d4d493");
+		if($(".nzip:eq(3)").text() != 'null.zip') $(".zip").css("background-color", "yellow");
+		else $(".zip").css("background-color", "#d4d493");
+		if($(".nrar:eq(3)").text() != 'null.rar') $(".rar").css("background-color", "pink");
+		else $(".rar").css("background-color", "#d4d493");
+	});
+	$(".caption:eq(4)").on("click", function(){
+		$(".utext").css("display", "none");
+		$(".utext:eq(4)").css("display", "inline-block");
+		$(".utext:eq(4)").css("height", "auto");
+		$(".corpus").css("height", "auto");
+		N=5;
+		$(".jpg").css("display", "inline-block");
+		$(".docx").css("display", "inline-block");
+		$(".xlsx").css("display", "inline-block");
+		$(".zip").css("display", "inline-block");
+		$(".rar").css("display", "inline-block");
+		if($(".njpg:eq(4)").text() != 'null.jpg') $(".jpg").css("background-color", "red");
+		else $(".jpg").css("background-color", "#d4d493");
+		if($(".ndocx:eq(4)").text() != 'null.docx') $(".docx").css("background-color", "blue");
+		else $(".docx").css("background-color", "#d4d493");
+		if($(".nxlsx:eq(4)").text() != 'null.xlsx') $(".xlsx").css("background-color", "green");
+		else $(".xlsx").css("background-color", "#d4d493");
+		if($(".nzip:eq(4)").text() != 'null.zip') $(".zip").css("background-color", "yellow");
+		else $(".zip").css("background-color", "#d4d493");
+		if($(".nrar:eq(4)").text() != 'null.rar') $(".rar").css("background-color", "pink");
+		else $(".rar").css("background-color", "#d4d493");
+	});
+	$(".caption:eq(5)").on("click", function(){
+		$(".utext").css("display", "none");
+		$(".utext:eq(5)").css("display", "inline-block");
+		$(".utext:eq(5)").css("height", "auto");
+		$(".corpus").css("height", "auto");
+		N=6;
+		$(".jpg").css("display", "inline-block");
+		$(".docx").css("display", "inline-block");
+		$(".xlsx").css("display", "inline-block");
+		$(".zip").css("display", "inline-block");
+		$(".rar").css("display", "inline-block");
+		if($(".njpg:eq(5)").text() != 'null.jpg') $(".jpg").css("background-color", "red");
+		else $(".jpg").css("background-color", "#d4d493");
+		if($(".ndocx:eq(5)").text() != 'null.docx') $(".docx").css("background-color", "blue");
+		else $(".docx").css("background-color", "#d4d493");
+		if($(".nxlsx:eq(5)").text() != 'null.xlsx') $(".xlsx").css("background-color", "green");
+		else $(".xlsx").css("background-color", "#d4d493");
+		if($(".nzip:eq(5)").text() != 'null.zip') $(".zip").css("background-color", "yellow");
+		else $(".zip").css("background-color", "#d4d493");
+		if($(".nrar:eq(5)").text() != 'null.rar') $(".rar").css("background-color", "pink");
+		else $(".rar").css("background-color", "#d4d493");
+	});
+	$(".caption:eq(6)").on("click", function(){
+		$(".utext").css("display", "none");
+		$(".utext:eq(6)").css("display", "inline-block");
+		$(".utext:eq(6)").css("height", "auto");
+		$(".corpus").css("height", "auto");
+		N=7;
+		$(".jpg").css("display", "inline-block");
+		$(".docx").css("display", "inline-block");
+		$(".xlsx").css("display", "inline-block");
+		$(".zip").css("display", "inline-block");
+		$(".rar").css("display", "inline-block");
+		if($(".njpg:eq(6)").text() != 'null.jpg') $(".jpg").css("background-color", "red");
+		else $(".jpg").css("background-color", "#d4d493");
+		if($(".ndocx:eq(6)").text() != 'null.docx') $(".docx").css("background-color", "blue");
+		else $(".docx").css("background-color", "#d4d493");
+		if($(".nxlsx:eq(6)").text() != 'null.xlsx') $(".xlsx").css("background-color", "green");
+		else $(".xlsx").css("background-color", "#d4d493");
+		if($(".nzip:eq(6)").text() != 'null.zip') $(".zip").css("background-color", "yellow");
+		else $(".zip").css("background-color", "#d4d493");
+		if($(".nrar:eq(6)").text() != 'null.rar') $(".rar").css("background-color", "pink");
+		else $(".rar").css("background-color", "#d4d493");
+	});
+	//обработали
+	//нажатие на новость из правого столбца
+	$(".theme:eq(0)").on("click", function(){
+		$(".oprosi").css("display", "none");
+		$(".pravlenie").css("display", "none");
+		$(".pravBaza").css("display", "none");
+		$(".finansi").css("display", "none");
+		$(".electro").css("display", "none");
+		$(".nashaJizn").css("display", "none");
+		$(".forum").css("display", "none");
+		$(".glavnaya").css("display", "inline-block");
+		$(".utext").css("display", "none");
+		$(".utext:eq(0)").css("display", "inline-block");
+		$(".utext:eq(0)").css("height", "auto");
+		$(".corpus").css("height", "auto");
+		N=1;
+		$(".jpg").css("display", "inline-block");
+		$(".docx").css("display", "inline-block");
+		$(".xlsx").css("display", "inline-block");
+		$(".zip").css("display", "inline-block");
+		$(".rar").css("display", "inline-block");
+		if($(".njpg:eq(0)").text() != 'null.jpg') $(".jpg").css("background-color", "red");
+		else $(".jpg").css("background-color", "#d4d493");
+		if($(".ndocx:eq(0)").text() != 'null.docx') $(".docx").css("background-color", "blue");
+		else $(".docx").css("background-color", "#d4d493");
+		if($(".nxlsx:eq(0)").text() != 'null.xlsx') $(".xlsx").css("background-color", "green");
+		else $(".xlsx").css("background-color", "#d4d493");
+		if($(".nzip:eq(0)").text() != 'null.zip') $(".zip").css("background-color", "yellow");
+		else $(".zip").css("background-color", "#d4d493");
+		if($(".nrar:eq(0)").text() != 'null.rar') $(".rar").css("background-color", "pink");
+		else $(".rar").css("background-color", "#d4d493");
+	});
+	$(".theme:eq(1)").on("click", function(){
+		$(".oprosi").css("display", "none");
+		$(".pravlenie").css("display", "none");
+		$(".pravBaza").css("display", "none");
+		$(".finansi").css("display", "none");
+		$(".electro").css("display", "none");
+		$(".nashaJizn").css("display", "none");
+		$(".forum").css("display", "none");
+		$(".glavnaya").css("display", "inline-block");
+		$(".utext").css("display", "none");
+		$(".utext:eq(1)").css("display", "inline-block");
+		$(".utext:eq(1)").css("height", "auto");
+		$(".corpus").css("height", "auto");
+		N=2;
+		$(".jpg").css("display", "inline-block");
+		$(".docx").css("display", "inline-block");
+		$(".xlsx").css("display", "inline-block");
+		$(".zip").css("display", "inline-block");
+		$(".rar").css("display", "inline-block");
+		if($(".njpg:eq(1)").text() != 'null.jpg') $(".jpg").css("background-color", "red");
+		else $(".jpg").css("background-color", "#d4d493");
+		if($(".ndocx:eq(1)").text() != 'null.docx') $(".docx").css("background-color", "blue");
+		else $(".docx").css("background-color", "#d4d493");
+		if($(".nxlsx:eq(1)").text() != 'null.xlsx') $(".xlsx").css("background-color", "green");
+		else $(".xlsx").css("background-color", "#d4d493");
+		if($(".nzip:eq(1)").text() != 'null.zip') $(".zip").css("background-color", "yellow");
+		else $(".zip").css("background-color", "#d4d493");
+		if($(".nrar:eq(1)").text() != 'null.rar') $(".rar").css("background-color", "pink");
+		else $(".rar").css("background-color", "#d4d493");
+	});
+	$(".theme:eq(2)").on("click", function(){
+		$(".oprosi").css("display", "none");
+		$(".pravlenie").css("display", "none");
+		$(".pravBaza").css("display", "none");
+		$(".finansi").css("display", "none");
+		$(".electro").css("display", "none");
+		$(".nashaJizn").css("display", "none");
+		$(".forum").css("display", "none");
+		$(".glavnaya").css("display", "inline-block");
+		$(".utext").css("display", "none");
+		$(".utext:eq(2)").css("display", "inline-block");
+		$(".utext:eq(2)").css("height", "auto");
+		$(".corpus").css("height", "auto");
+		N=3;
+		$(".jpg").css("display", "inline-block");
+		$(".docx").css("display", "inline-block");
+		$(".xlsx").css("display", "inline-block");
+		$(".zip").css("display", "inline-block");
+		$(".rar").css("display", "inline-block");
+		if($(".njpg:eq(2)").text() != 'null.jpg') $(".jpg").css("background-color", "red");
+		else $(".jpg").css("background-color", "#d4d493");
+		if($(".ndocx:eq(2)").text() != 'null.docx') $(".docx").css("background-color", "blue");
+		else $(".docx").css("background-color", "#d4d493");
+		if($(".nxlsx:eq(2)").text() != 'null.xlsx') $(".xlsx").css("background-color", "green");
+		else $(".xlsx").css("background-color", "#d4d493");
+		if($(".nzip:eq(2)").text() != 'null.zip') $(".zip").css("background-color", "yellow");
+		else $(".zip").css("background-color", "#d4d493");
+		if($(".nrar:eq(2)").text() != 'null.rar') $(".rar").css("background-color", "pink");
+		else $(".rar").css("background-color", "#d4d493");
+	});
+	$(".theme:eq(3)").on("click", function(){
+		$(".oprosi").css("display", "none");
+		$(".pravlenie").css("display", "none");
+		$(".pravBaza").css("display", "none");
+		$(".finansi").css("display", "none");
+		$(".electro").css("display", "none");
+		$(".nashaJizn").css("display", "none");
+		$(".forum").css("display", "none");
+		$(".glavnaya").css("display", "inline-block");
+		$(".utext").css("display", "none");
+		$(".utext:eq(3)").css("display", "inline-block");
+		$(".utext:eq(3)").css("height", "auto");
+		$(".corpus").css("height", "auto");
+		N=4;
+		$(".jpg").css("display", "inline-block");
+		$(".docx").css("display", "inline-block");
+		$(".xlsx").css("display", "inline-block");
+		$(".zip").css("display", "inline-block");
+		$(".rar").css("display", "inline-block");
+		if($(".njpg:eq(3)").text() != 'null.jpg') $(".jpg").css("background-color", "red");
+		else $(".jpg").css("background-color", "#d4d493");
+		if($(".ndocx:eq(3)").text() != 'null.docx') $(".docx").css("background-color", "blue");
+		else $(".docx").css("background-color", "#d4d493");
+		if($(".nxlsx:eq(3)").text() != 'null.xlsx') $(".xlsx").css("background-color", "green");
+		else $(".xlsx").css("background-color", "#d4d493");
+		if($(".nzip:eq(3)").text() != 'null.zip') $(".zip").css("background-color", "yellow");
+		else $(".zip").css("background-color", "#d4d493");
+		if($(".nrar:eq(3)").text() != 'null.rar') $(".rar").css("background-color", "pink");
+		else $(".rar").css("background-color", "#d4d493");
+	});
+	$(".theme:eq(4)").on("click", function(){
+		$(".oprosi").css("display", "none");
+		$(".pravlenie").css("display", "none");
+		$(".pravBaza").css("display", "none");
+		$(".finansi").css("display", "none");
+		$(".electro").css("display", "none");
+		$(".nashaJizn").css("display", "none");
+		$(".forum").css("display", "none");
+		$(".glavnaya").css("display", "inline-block");
+		$(".utext").css("display", "none");
+		$(".utext:eq(4)").css("display", "inline-block");
+		$(".utext:eq(4)").css("height", "auto");
+		$(".corpus").css("height", "auto");
+		N=5;
+		$(".jpg").css("display", "inline-block");
+		$(".docx").css("display", "inline-block");
+		$(".xlsx").css("display", "inline-block");
+		$(".zip").css("display", "inline-block");
+		$(".rar").css("display", "inline-block");
+		if($(".njpg:eq(4)").text() != 'null.jpg') $(".jpg").css("background-color", "red");
+		else $(".jpg").css("background-color", "#d4d493");
+		if($(".ndocx:eq(4)").text() != 'null.docx') $(".docx").css("background-color", "blue");
+		else $(".docx").css("background-color", "#d4d493");
+		if($(".nxlsx:eq(4)").text() != 'null.xlsx') $(".xlsx").css("background-color", "green");
+		else $(".xlsx").css("background-color", "#d4d493");
+		if($(".nzip:eq(4)").text() != 'null.zip') $(".zip").css("background-color", "yellow");
+		else $(".zip").css("background-color", "#d4d493");
+		if($(".nrar:eq(4)").text() != 'null.rar') $(".rar").css("background-color", "pink");
+		else $(".rar").css("background-color", "#d4d493");
+	});
+	$(".theme:eq(5)").on("click", function(){
+		$(".oprosi").css("display", "none");
+		$(".pravlenie").css("display", "none");
+		$(".pravBaza").css("display", "none");
+		$(".finansi").css("display", "none");
+		$(".electro").css("display", "none");
+		$(".nashaJizn").css("display", "none");
+		$(".forum").css("display", "none");
+		$(".glavnaya").css("display", "inline-block");
+		$(".utext").css("display", "none");
+		$(".utext:eq(5)").css("display", "inline-block");
+		$(".utext:eq(5)").css("height", "auto");
+		$(".corpus").css("height", "auto");
+		N=6;
+		$(".jpg").css("display", "inline-block");
+		$(".docx").css("display", "inline-block");
+		$(".xlsx").css("display", "inline-block");
+		$(".zip").css("display", "inline-block");
+		$(".rar").css("display", "inline-block");
+		if($(".njpg:eq(5)").text() != 'null.jpg') $(".jpg").css("background-color", "red");
+		else $(".jpg").css("background-color", "#d4d493");
+		if($(".ndocx:eq(5)").text() != 'null.docx') $(".docx").css("background-color", "blue");
+		else $(".docx").css("background-color", "#d4d493");
+		if($(".nxlsx:eq(5)").text() != 'null.xlsx') $(".xlsx").css("background-color", "green");
+		else $(".xlsx").css("background-color", "#d4d493");
+		if($(".nzip:eq(5)").text() != 'null.zip') $(".zip").css("background-color", "yellow");
+		else $(".zip").css("background-color", "#d4d493");
+		if($(".nrar:eq(5)").text() != 'null.rar') $(".rar").css("background-color", "pink");
+		else $(".rar").css("background-color", "#d4d493");
+	});
+	$(".theme:eq(6)").on("click", function(){
+		$(".oprosi").css("display", "none");
+		$(".pravlenie").css("display", "none");
+		$(".pravBaza").css("display", "none");
+		$(".finansi").css("display", "none");
+		$(".electro").css("display", "none");
+		$(".nashaJizn").css("display", "none");
+		$(".forum").css("display", "none");
+		$(".glavnaya").css("display", "inline-block");
+		$(".utext").css("display", "none");
+		$(".utext:eq(6)").css("display", "inline-block");
+		$(".utext:eq(6)").css("height", "auto");
+		$(".corpus").css("height", "auto");
+		N=7;
+		$(".jpg").css("display", "inline-block");
+		$(".docx").css("display", "inline-block");
+		$(".xlsx").css("display", "inline-block");
+		$(".zip").css("display", "inline-block");
+		$(".rar").css("display", "inline-block");
+		if($(".njpg:eq(6)").text() != 'null.jpg') $(".jpg").css("background-color", "red");
+		else $(".jpg").css("background-color", "#d4d493");
+		if($(".ndocx:eq(6)").text() != 'null.docx') $(".docx").css("background-color", "blue");
+		else $(".docx").css("background-color", "#d4d493");
+		if($(".nxlsx:eq(6)").text() != 'null.xlsx') $(".xlsx").css("background-color", "green");
+		else $(".xlsx").css("background-color", "#d4d493");
+		if($(".nzip:eq(6)").text() != 'null.zip') $(".zip").css("background-color", "yellow");
+		else $(".zip").css("background-color", "#d4d493");
+		if($(".nrar:eq(6)").text() != 'null.rar') $(".rar").css("background-color", "pink");
+		else $(".rar").css("background-color", "#d4d493");
+	});
+	//нажали и отработали
+	//нажимаем скачать картинку
+$(".jpg").on('click', function(){
+	//alert(N);
+	if(N == 1){
+		if ($(".njpg:eq(0)").text() != 'null.jpg'){
+			var url = "public/jpg/" + $(".njpg:eq(0)").text();
+			window.location.href = url;
+		}
+	}	
+	if(N == 2){
+		//alert($(".njpg:eq(1)").text());
+		if ($(".njpg:eq(1)").text() != 'null.jpg'){
+			var url = "public/jpg/" + $(".njpg:eq(1)").text();
+			window.location.href = url;
+		}
+	}	
+	if(N == 3){
+		if ($(".njpg:eq(2)").text() != 'null.jpg'){
+			var url = "public/jpg/" + $(".njpg:eq(2)").text();
+			window.location.href = url;
+		}
+	}
+	if(N == 4){
+		if ($(".njpg:eq(3)").text() != 'null.jpg'){
+			var url = "public/jpg/" + $(".njpg:eq(3)").text();
+			window.location.href = url;
+		}
+	}
+	if(N == 5){
+		if ($(".njpg:eq(4)").text() != 'null.jpg'){
+			var url = "public/jpg/" + $(".njpg:eq(4)").text();
+			window.location.href = url;
+		}
+	}
+	if(N == 6){
+		if ($(".njpg:eq(5)").text() != 'null.jpg'){
+			var url = "public/jpg/" + $(".njpg:eq(5)").text();
+			window.location.href = url;
+		}
+	}
+	if(N == 7){
+		if ($(".njpg:eq(6)").text() != 'null.jpg'){
+			var url = "public/jpg/" + $(".njpg:eq(6)").text();
+			window.location.href = url;
+		}
+	}
+});
+$(".docx").on('click', function(){
+	//alert(N);
+	if(N == 1){
+		if ($(".ndocx:eq(0)").text() != 'null.docx'){
+			var url = "public/docx/" + $(".ndocx:eq(0)").text();
+			window.location.href = url;
+		}
+	}	
+	if(N == 2){
+		//alert($(".njpg:eq(1)").text());
+		if ($(".ndocx:eq(1)").text() != 'null.docx'){
+			var url = "public/docx/" + $(".ndocx:eq(1)").text();
+			window.location.href = url;
+		}
+	}	
+	if(N == 3){
+		if ($(".ndocx:eq(2)").text() != 'null.docx'){
+			var url = "public/docx/" + $(".ndocx:eq(2)").text();
+			window.location.href = url;
+		}
+	}
+	if(N == 4){
+		if ($(".ndocx:eq(3)").text() != 'null.docx'){
+			var url = "public/docx/" + $(".ndocx:eq(3)").text();
+			window.location.href = url;
+		}
+	}
+	if(N == 5){
+		if ($(".ndocx:eq(4)").text() != 'null.docx'){
+			var url = "public/docx/" + $(".ndocx:eq(4)").text();
+			window.location.href = url;
+		}
+	}
+	if(N == 6){
+		if ($(".ndocx:eq(5)").text() != 'null.docx'){
+			var url = "public/docx/" + $(".ndocx:eq(5)").text();
+			window.location.href = url;
+		}
+	}
+	if(N == 7){
+		if ($(".ndocx:eq(6)").text() != 'null.docx'){
+			var url = "public/docx/" + $(".ndocx:eq(6)").text();
+			window.location.href = url;
+		}
+	}
+});
+$(".xlsx").on('click', function(){
+	//alert(N);
+	if(N == 1){
+		if ($(".nxlsx:eq(0)").text() != 'null.xlsx'){
+			var url = "public/xlsx/" + $(".nxlsx:eq(0)").text();
+			window.location.href = url;
+		}
+	}	
+	if(N == 2){
+		//alert($(".njpg:eq(1)").text());
+		if ($(".nxlsx:eq(1)").text() != 'null.xlsx'){
+			var url = "public/xlsx/" + $(".nxlsx:eq(1)").text();
+			window.location.href = url;
+		}
+	}	
+	if(N == 3){
+		if ($(".nxlsx:eq(2)").text() != 'null.xlsx'){
+			var url = "public/xlsx/" + $(".nxlsx:eq(2)").text();
+			window.location.href = url;
+		}
+	}
+	if(N == 4){
+		if ($(".nxlsx:eq(3)").text() != 'null.xlsx'){
+			var url = "public/xlsx/" + $(".nxlsx:eq(3)").text();
+			window.location.href = url;
+		}
+	}
+	if(N == 5){
+		if ($(".nxlsx:eq(4)").text() != 'null.xlsx'){
+			var url = "public/xlsx/" + $(".nxlsx:eq(4)").text();
+			window.location.href = url;
+		}
+	}
+	if(N == 6){
+		if ($(".nxlsx:eq(5)").text() != 'null.xlsx'){
+			var url = "public/xlsx/" + $(".nxlsx:eq(5)").text();
+			window.location.href = url;
+		}
+	}
+	if(N == 7){
+		if ($(".nxlsx:eq(6)").text() != 'null.xlsx'){
+			var url = "public/xlsx/" + $(".nxlsx:eq(6)").text();
+			window.location.href = url;
+		}
+	}
+});
+$(".zip").on('click', function(){
+	//alert(N);
+	if(N == 1){
+		if ($(".nzip:eq(0)").text() != 'null.zip'){
+			var url = "public/zip/" + $(".nzip:eq(0)").text();
+			window.location.href = url;
+		}
+	}	
+	if(N == 2){
+		//alert($(".njpg:eq(1)").text());
+		if ($(".nzip:eq(1)").text() != 'null.zip'){
+			var url = "public/zip/" + $(".nzip:eq(1)").text();
+			window.location.href = url;
+		}
+	}	
+	if(N == 3){
+		if ($(".nzip:eq(2)").text() != 'null.zip'){
+			var url = "public/zip/" + $(".nzip:eq(2)").text();
+			window.location.href = url;
+		}
+	}
+	if(N == 4){
+		if ($(".nzip:eq(3)").text() != 'null.zip'){
+			var url = "public/zip/" + $(".nzip:eq(3)").text();
+			window.location.href = url;
+		}
+	}
+	if(N == 5){
+		if ($(".nzip:eq(4)").text() != 'null.zip'){
+			var url = "public/zip/" + $(".nzip:eq(4)").text();
+			window.location.href = url;
+		}
+	}
+	if(N == 6){
+		if ($(".nzip:eq(5)").text() != 'null.zip'){
+			var url = "public/zip/" + $(".nzip:eq(5)").text();
+			window.location.href = url;
+		}
+	}
+	if(N == 7){
+		if ($(".nzip:eq(6)").text() != 'null.zip'){
+			var url = "public/zip/" + $(".nzip:eq(6)").text();
+			window.location.href = url;
+		}
+	}
+});
+$(".rar").on('click', function(){
+	//alert(N);
+	if(N == 1){
+		if ($(".nrar:eq(0)").text() != 'null.rar'){
+			var url = "public/rar/" + $(".nrar:eq(0)").text();
+			window.location.href = url;
+		}
+	}	
+	if(N == 2){
+		//alert($(".njpg:eq(1)").text());
+		if ($(".nrar:eq(1)").text() != 'null.rar'){
+			var url = "public/rar/" + $(".nrar:eq(1)").text();
+			window.location.href = url;
+		}
+	}	
+	if(N == 3){
+		if ($(".nrar:eq(2)").text() != 'null.rar'){
+			var url = "public/rar/" + $(".nrar:eq(2)").text();
+			window.location.href = url;
+		}
+	}
+	if(N == 4){
+		if ($(".nrar:eq(3)").text() != 'null.rar'){
+			var url = "public/rar/" + $(".nrar:eq(3)").text();
+			window.location.href = url;
+		}
+	}
+	if(N == 5){
+		if ($(".nrar:eq(4)").text() != 'null.rar'){
+			var url = "public/rar/" + $(".nrar:eq(4)").text();
+			window.location.href = url;
+		}
+	}
+	if(N == 6){
+		if ($(".nrar:eq(5)").text() != 'null.rar'){
+			var url = "public/rar/" + $(".nrar:eq(5)").text();
+			window.location.href = url;
+		}
+	}
+	if(N == 7){
+		if ($(".nrar:eq(6)").text() != 'null.rar'){
+			var url = "public/rar/" + $(".nrar:eq(6)").text();
+			window.location.href = url;
+		}
+	}
+});
+	//нажали
+//нажимаем на кнопку "ГЛАВНАЯ"
+	$(".menu1").on("click", function(){
+		$(".pravlenie").css("display", "none");
+		$(".pravBaza").css("display", "none");
+		$(".finansi").css("display", "none");
+		$(".electro").css("display", "none");
+		$(".nashaJizn").css("display", "none");
+		$(".forum").css("display", "none");
+		$(".oprosi").css("display", "none");
+
+		$(".glavnaya").css("display", "inline-block");
+		
+		$(".utext").css("display", "inline-block");
+		$(".utext").css("height", "130px");
+		$(".corpus").css("height", "auto");
+		//N = false;
+		$(".jpg").css("display", "none");
+		$(".docx").css("display", "none");
+		$(".xlsx").css("display", "none");
+		$(".zip").css("display", "none");
+		$(".rar").css("display", "none");
+			if ($(".number:eq(6)").text() == 'null'){
+		$(".number:eq(6)").text('');
+		$(".utext:eq(6)").css("border", "none");
+	}
+	if ($(".number:eq(5)").text() == 'null'){
+		$(".number:eq(5)").text('');
+		$(".utext:eq(5)").css("border", "none");
+	}
+	if ($(".number:eq(4)").text() == 'null'){
+		$(".number:eq(4)").text('');
+		$(".utext:eq(4)").css("border", "none");
+	}
+	if ($(".number:eq(3)").text() == 'null'){
+		$(".number:eq(3)").text('');
+		$(".utext:eq(3)").css("border", "none");
+	}	
+	if ($(".number:eq(2)").text() == 'null'){
+		$(".number:eq(2)").text('');
+		$(".utext:eq(2)").css("border", "none");
+	}
+	if ($(".number:eq(1)").text() == 'null'){
+		$(".number:eq(1)").text('');
+		$(".utext:eq(1)").css("border", "none");
+	}
+	if ($(".number:eq(0)").text() == 'null'){
+		$(".number:eq(0)").text('');
+		$(".utext:eq(0)").css("border", "none");
+	}
+	});
+//нажимаем на кнопку "ОПРОСЫ"
+	$(".menu2").on("click", function(){
+		$(".pravlenie").css("display", "none");
+		$(".pravBaza").css("display", "none");
+		$(".finansi").css("display", "none");
+		$(".electro").css("display", "none");
+		$(".nashaJizn").css("display", "none");
+		$(".forum").css("display", "none");
+		$(".glavnaya").css("display", "none");
+		
+		$(".oprosi").css("display", "inline-block");
+
+		$(".jpg").css("display", "none");
+		$(".docx").css("display", "none");
+		$(".xlsx").css("display", "none");
+		$(".zip").css("display", "none");
+		$(".rar").css("display", "none");
+	});
+//нажимаем на кнопку "ПРАВЛЕНИЕ"
+	$(".menu3").on("click", function(){
+		$(".oprosi").css("display", "none");
+		$(".pravBaza").css("display", "none");
+		$(".finansi").css("display", "none");
+		$(".electro").css("display", "none");
+		$(".nashaJizn").css("display", "none");
+		$(".forum").css("display", "none");
+		$(".glavnaya").css("display", "none");
+		
+		$(".pravlenie").css("display", "inline-block");
+
+		$(".jpg").css("display", "none");
+		$(".docx").css("display", "none");
+		$(".xlsx").css("display", "none");
+		$(".zip").css("display", "none");
+		$(".rar").css("display", "none");
+	});
+</script>
+
+</body>
+</html>
